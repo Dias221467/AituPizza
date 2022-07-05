@@ -3,3 +3,53 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: black;
+}
+
+.logo{display: flex;
+      justify-content: center;
+      align-items: center;}
+
+.logo-text{
+    font-size: 35px;
+    color:#FFF;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+span{
+    color:#f9004d;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 30px; 
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    color:#f9004d;
+    transition:  .4s;
+}
+
+.cart{
+    transform: scaleX(-1);
+}
+.cart:hover{
+    content: url(/images/cart-pink.png);
+}
