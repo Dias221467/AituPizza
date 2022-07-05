@@ -53,3 +53,7 @@ nav ul li a:hover{
 .cart:hover{
     content: url(/images/cart-pink.png);
 }
+
+main{
+    background-color: #f3f3f7;;
+}
