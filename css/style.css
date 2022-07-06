@@ -77,11 +77,15 @@ main{
   color: rgb(120, 124, 130);
 }
 
-.counter-wrapper{
+.counterWrapper{
     display: flex;
     justify-content: center;
 }
 
-.counter-wrapper div{
+.counterWrapper div{
     padding: 10px 15px;
+}
+
+.counterMinus, .counterPlus{
+    cursor: pointer;
 }
