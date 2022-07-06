@@ -55,5 +55,33 @@ nav ul li a:hover{
 }
 
 main{
-    background-color: #f3f3f7;;
+    background-color: #f3f3f7;
+    padding: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.card{
+    background-color: #FFF;
+    width: 300px;
+    height: 480px;
+    border-radius: 10%;
+    padding: 20px; 
+
+}
+
+.title{
+   text-align: center;
+}
+.description{
+  color: rgb(120, 124, 130);
+}
+
+.counter-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.counter-wrapper div{
+    padding: 10px 15px;
 }
