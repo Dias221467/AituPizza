@@ -122,5 +122,22 @@ label:hover{
     margin: 2px;
 }
 
+label:active{
+    box-shadow: #D6D6E7 0 3px 7px inset;
+}
 
+.price{
+    font-family:  system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: rgb(11, 11, 11);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: lowercase;
+}
 
+.wrapperPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
