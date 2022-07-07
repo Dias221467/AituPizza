@@ -125,7 +125,9 @@ label:hover{
 label:active{
     box-shadow: #D6D6E7 0 3px 7px inset;
 }
-
+.active{
+    box-shadow: #D6D6E7 0 3px 7px inset;
+}
 .price{
     font-family:  system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: rgb(11, 11, 11);
@@ -134,7 +136,9 @@ label:active{
     line-height: 24px;
     text-transform: lowercase;
 }
-
+.price span{
+    color: rgb(11, 11, 11);
+}
 .wrapperPrice{
     display: flex;
     justify-content: center;
