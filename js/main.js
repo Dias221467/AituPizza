@@ -1,11 +1,12 @@
 
 let l = console.log
 window.addEventListener( 'click', function(event){
+
+    // buttons for size picca
     let buttons = this.document.querySelectorAll(['label'])
     let btnActiveSmall = this.document.querySelector('[data-size="small"]')
     let btnActiveMedium = this.document.querySelector('[data-size="medium"]')
     let btnActiveLarge = this.document.querySelector('[data-size="large"]')
-    l(btnActiveSmall)
      let price = this.document.querySelector('.price span')
      if(event.target.dataset.size == "small"){
         event.target.classList.add("active")
@@ -32,6 +33,16 @@ window.addEventListener( 'click', function(event){
         })
         price.textContent = 0;
     }
+
+    // buttons for thin or thick
+    let btnThin = this.document.querySelector(".thin")
+    let btnThick = this.document.querySelector(".thick")
+    if (event.target.textContent == "thin")
+    {btnThin.classList.add("active")
+    btnThick.classList.remove("active")}
+    else if(event.target.textContent == "thick")
+    {btnThick.classList.add("active")
+    btnThin.classList.remove("active")}
    
 })
 
