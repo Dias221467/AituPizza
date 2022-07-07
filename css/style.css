@@ -60,6 +60,10 @@ main{
     padding-left: 5%;
     padding-right: 5%;
 }
+.row .card{
+    display: inline-block;
+    margin: 10px;
+}
 
 .card{
     background-color: #FFF;
