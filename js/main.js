@@ -49,17 +49,6 @@ window.addEventListener( 'click', function(event){
         btnThin.classList.remove('active')
    
     } 
- 
-    // button add to cart    
-    // if (event.target.className ==='button-30'){
-    //     const buttons = cardWrapper.querySelectorAll(['label'])
-    //     buttons.forEach(function(item){
-    //     item.classList.remove('active')
-    //     })
-    //     price.textContent = 0;
-    //     example = 12
-
-    // }
 }
 })
 
