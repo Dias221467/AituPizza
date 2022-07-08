@@ -33,7 +33,7 @@
     <main>
 
         <div class="row">
-            <div class="card" id="1">
+            <div class="card productInCart" >
                 <img src="/images/picca/4-seasons.png" width="250px" alt="">
                 <h3 class="title">Four seasons</h3>
                 <p class="description">
@@ -51,12 +51,14 @@
                 </div>
                     <div class="wrapperPrice">
                     <p class="price">$<span>0</span></p>
-                    <button class="button-30" role="button">add to cart</button>
+                    <button class="button-30 addToCart" role="button" data-product-id="1">
+                        add to cart
+                    </button>
                 </div>
                
             </div>
 
-            <div class="card" id="2">
+            <div class="card productInCart">
                 <img src="/images/picca/Vedzhi Fit & Fresh.png" width="250px" alt="">
                 <h3 class="title">Vedzhi Fit & Fresh</h3>
                 <p class="description">
@@ -74,7 +76,9 @@
                 </div>
                     <div class="wrapperPrice">
                     <p class="price">$<span>0</span></p>
-                    <button class="button-30" role="button">add to cart</button>
+                    <button class="button-30 addToCart" role="button" data-product-Id="2">
+                        add to cart
+                    </button>
                 </div>
                
             </div>
@@ -88,5 +92,7 @@
 
     <script src="/js/counter.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/orderCart.js"></script>
+    <script src="/js/test.js"> </script>
 </body>
 </html>
