@@ -1,14 +1,12 @@
-export let price;
+export let price, btnActive
 const l = console.log
-const pricesProducts = [
-    {id:1, size:'small', price:12}
-    ]
-  
+
 window.addEventListener( 'click', function(event){
 
     // buttons for size picca and price
     if (event.target.closest('.card')){
     const cardWrapper = event.target.closest('.card')
+    btnActive = cardWrapper.querySelectorAll('label')
     const btnActiveSmall = cardWrapper.querySelector('[data-size="small"]')
     const btnActiveMedium = cardWrapper.querySelector('[data-size="medium"]')
     const btnActiveLarge = cardWrapper.querySelector('[data-size="large"]')
@@ -51,6 +49,14 @@ window.addEventListener( 'click', function(event){
         btnThin.classList.remove('active')
    
     } 
+
+
+//     function removeActivBtn(buttons){
+//     buttons.forEach(button=>{
+//         button.classList.remove('active')
+//         price.textContent = '0'
+//     })
+// }
 }
 })
 
