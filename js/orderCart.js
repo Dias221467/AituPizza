@@ -67,8 +67,6 @@ function removeActivBtn(buttons){
     buttons.forEach(button=>{
         let WrapperCardId = button.closest('.card')
         let WrapperProductId = WrapperCardId.querySelector('.addToCart')
-       console.log(WrapperCardId.dataset.cardId)
-       console.log(productID)
        if (WrapperCardId.dataset.cardId == productID){
         button.classList.remove('active')
         price.textContent = '0';
