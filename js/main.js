@@ -1,6 +1,9 @@
-
+export let price;
 const l = console.log
-
+const pricesProducts = [
+    {id:1, size:'small', price:12}
+    ]
+  
 window.addEventListener( 'click', function(event){
 
     // buttons for size picca and price
@@ -9,7 +12,8 @@ window.addEventListener( 'click', function(event){
     const btnActiveSmall = cardWrapper.querySelector('[data-size="small"]')
     const btnActiveMedium = cardWrapper.querySelector('[data-size="medium"]')
     const btnActiveLarge = cardWrapper.querySelector('[data-size="large"]')
-    const price = cardWrapper.querySelector('.price span')
+    price = cardWrapper.querySelector('.price span')
+    
 
     if (event.target.className == 'btnActive'){
 
@@ -20,17 +24,17 @@ window.addEventListener( 'click', function(event){
 
      if(event.target.dataset.size == "small"){
         event.target.classList.add("active")
-        price.textContent = '8';
+        price.textContent = '12';
      }
      else if(event.target.dataset.size == 'medium'){
         event.target.classList.add('active')
 
-        price.textContent = '12';
+        price.textContent = '16';
      }
 
      else if(event.target.dataset.size == 'large'){
         event.target.classList.add('active')
-        price.textContent = '15';   
+        price.textContent = '20';   
      }
     }
 
@@ -39,12 +43,10 @@ window.addEventListener( 'click', function(event){
     const btnThick = cardWrapper.querySelector('[data-dough="thick"]')
     
     if (event.target.textContent == 'thin'){
-        doughThickness = event.target.textContent
         btnThin.classList.add('active')
         btnThick.classList.remove('active')
     }
     else if(event.target.textContent == 'thick'){
-        doughThickness = event.target.textContent
         btnThick.classList.add('active')
         btnThin.classList.remove('active')
    

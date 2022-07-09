@@ -59,6 +59,7 @@ main{
     padding: 30px;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 10%;
 }
 .row .card{
     display: inline-block;

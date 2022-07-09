@@ -1,9 +1,10 @@
-
+import {price} from './main.js'
 let productsInCart = [] // variable for cart
 let exam = []
 const products = document.querySelectorAll('.productInCart')// variable for loop with or
 const innerCart = document.querySelector('.innerCart')
 let productToCart //an object containing orders to be sent to the cart
+let btnActive = document.querySelectorAll('label')
 
 
 // function for add products to shoping cart
@@ -13,10 +14,13 @@ function updateProductsInCart(product){
 
             productsInCart[i].count += 1
             productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count
+            removeActivBtn(btnActive) // function to disable active buttons after clicking the "add to cart" button
             return;
         }
      }
    productsInCart.push(product)
+   removeActivBtn(btnActive) // function to disable active buttons after clicking the "add to cart" button
+  
 }
 
 // creating an object containing order parameters
@@ -54,3 +58,12 @@ innerCart.addEventListener('click', function(event){
 
     }
 })
+
+
+// function to disable active buttons after clicking the "add to cart" button
+function removeActivBtn(buttons){
+    buttons.forEach(button=>{
+        button.classList.remove('active')
+        price.textContent = '0';
+    })
+}
