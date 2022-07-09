@@ -1,11 +1,12 @@
 
-let productsInCart = []
+let productsInCart = [] // variable for cart
 let exam = []
-const products = document.querySelectorAll('.productInCart')
+const products = document.querySelectorAll('.productInCart')// variable for loop with or
 const innerCart = document.querySelector('.innerCart')
-let productToCart
+let productToCart //an object containing orders to be sent to the cart
 
 
+// function for add products to shoping cart
 function updateProductsInCart(product){
     for(let i =0 ; i < productsInCart.length; ++i){
         if (productsInCart[i].id == product.id && productsInCart[i].size == product.size &&  productsInCart[i].dough == product.dough){
@@ -18,7 +19,7 @@ function updateProductsInCart(product){
    productsInCart.push(product)
 }
 
-
+// creating an object containing order parameters
 products.forEach(product =>{
     product.addEventListener('click', function(event){
         if (event.target.classList.contains('addToCart')){
