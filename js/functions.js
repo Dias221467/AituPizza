@@ -3,17 +3,19 @@ import {price, btnActive, cardId} from './main.js'
 import { pizzaOptions } from './pizzaOptions.js'
 
 //______________________________________________________
-export let productsInCart = []
-export function updateProductsInCart(product){
-    for(let i =0 ; i < productsInCart.length; ++i){
-        if (productsInCart[i].id == product.id && productsInCart[i].size == product.size &&  productsInCart[i].dough == product.dough){
 
-            productsInCart[i].count += 1
-            productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count
+export function updateItemInTheCart(product,itemInTheCart ){
+    for(let i = 0 ; i < itemInTheCart.length; ++i){
+        if (itemInTheCart[i].id == product.id && itemInTheCart[i].size == product.size &&  itemInTheCart[i].dough == product.dough){
+
+            itemInTheCart[i].count += 1
+            itemInTheCart[i].price = itemInTheCart[i].basePrice * itemInTheCart[i].count
             removeActivBtn(btnActive) // function to disable active buttons after clicking the "add to cart" button
+            console.log("count")
             return;}
      }
-   productsInCart.push(product)
+   itemInTheCart.push(product)
+   console.log("push")
    removeActivBtn(btnActive) // function to disable active buttons after clicking the "add to cart" button
 }
 
@@ -44,11 +46,11 @@ function removeActivBtn(buttons){
 
 
 //______________________________________________________
- const innerCart = document.querySelector('.innerCart')
-innerCart.addEventListener('click', function(event){
+//  const innerCart = document.querySelector('.innerCart')
+// innerCart.addEventListener('click', function(event){
    
-    if (event.target.classList.contains('innerCart')){
-       console.log(productsInCart)
+//     if (event.target.classList.contains('innerCart')){
+//        console.log(itemInTheCart)
 
-    }
-})
+//     }
+// })

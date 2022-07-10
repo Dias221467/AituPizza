@@ -1,9 +1,10 @@
-import { updateProductsInCart, productsInCart } from "./functions.js"
+import { updateItemInTheCart } from "./functions.js"
+import { pizzaOptions } from "./pizzaOptions.js";
 export let  productID;
 const products = document.querySelectorAll('.productInCart')// variable for loop with or
 const innerCart = document.querySelector('.innerCart')
 let productToCart //an object containing orders to be sent to the cart
-
+let itemInTheCart = []
 
 // creating an object containing order parameters
 products.forEach(product =>{
@@ -25,5 +26,16 @@ products.forEach(product =>{
                 price: +productPrice,
                 basePrice: +productPrice,
             }
-            updateProductsInCart(productToCart) }  })
+        
+            updateItemInTheCart(productToCart, itemInTheCart) }  })
+})           
+
+
+innerCart.addEventListener('click', function(event){
+   
+    if (event.target.classList.contains('innerCart')){
+       console.log(itemInTheCart)
+
+    }
 })
+
