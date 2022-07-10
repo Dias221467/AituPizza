@@ -15,7 +15,6 @@ export function updateItemInTheCart(product,itemInTheCart ){
             return;}
      }
    itemInTheCart.push(product)
-   console.log("push")
    removeActivBtn(btnActive) // function to disable active buttons after clicking the "add to cart" button
 }
 

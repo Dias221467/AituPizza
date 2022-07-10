@@ -7,8 +7,7 @@ export const pizzaOptions =
     price:'12', 
     name:'Vedzhi Fit & Fresh', 
     description: 'Mushrooms, Olives, Fresh tomatoes, Mozzarella cheese,  Feta cheese, Tomato sauce',
-    image: '/images/picca/Vedzhi Fit & Fresh.png'
-},
+    image: '/images/picca/Vedzhi Fit & Fresh.png'},
     {size:'28sm', price:'16'},
     {size:'33sm', price:'20'}]
 ,
@@ -19,13 +18,35 @@ export const pizzaOptions =
     image:'/images/picca/4-seasons.png'},
     {size:'28sm', price:'17'},
     {size:'33sm', price:'23'}]
+    
+,
+3:[
+    {size:'20sm', price:'18', 
+    name: 'Chicken Teriyaki',
+    description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
+    image:'/images/picca/chiken.png'},
+    {size:'28sm', price:'21'},
+    {size:'33sm', price:'28'}] 
+,
+4:[
+    {size:'20sm', price:'15', 
+    name: 'Royal Cheeseburger',
+    description: 'Bacon, Chicken, Onion, Pickled cucumbers, Fresh tomatoes, Mozzarella cheese' ,
+    image:'/images/picca/royal.png'},
+    {size:'28sm', price:'20'},
+    {size:'33sm', price:'25'}]     
  }
-//  addInfoPizzaToFront(pizzArrayCards)
 
+
+
+
+ //___________________________________________________________________________________________________
+//  addInfoPizzaToFront(pizzArrayCards)
+const pizzaOptionsLength =  Object.keys(pizzaOptions).length
  let d1 = document.getElementById('one');
   
-                  for (let i = 1; i< 3; i++ ){
- d1.insertAdjacentHTML('beforeend',       `  <div class="card" data-card-Id="${i}">
+                  for (let i = 1; i<pizzaOptionsLength+1; ++i){
+ d1.insertAdjacentHTML('beforeend', `  <div class="card" data-card-Id="${i}">
 
                 <div class="productInCart">
                     <img src="${pizzaOptions[i][0].image}" width="250px" alt="">
@@ -53,4 +74,3 @@ export const pizzaOptions =
  
  `)
 };
-
