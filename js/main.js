@@ -1,12 +1,14 @@
-export let price, btnActive
+export let price, btnActive, cardId
+import { pizzaOptions } from "./itemsObjects.js"
 const l = console.log
+
+
 
 window.addEventListener( 'click', function(event){
     // buttons for size picca and price
     if (event.target.closest('.card')){
     const cardWrapper = event.target.closest('.card')
-
-    // buttons for size picca
+    cardId = cardWrapper.dataset.cardId
     btnActive = cardWrapper.querySelectorAll('label')
     const btnActiveSmall = cardWrapper.querySelector('[data-size="small"]')
     const btnActiveMedium = cardWrapper.querySelector('[data-size="medium"]')
@@ -22,15 +24,19 @@ window.addEventListener( 'click', function(event){
 
      if(event.target.dataset.size == "small"){
         event.target.classList.add("active")
-        price.textContent = '12';}
+        price.textContent = pizzaOptions[cardId][0].price
+        l(piccaPrices[cardId][0].name)
+
+        }
+   
 
      else if(event.target.dataset.size == 'medium'){
         event.target.classList.add('active')
-        price.textContent = '16';}
+        price.textContent =  pizzaOptions[cardId][1].price}
 
      else if(event.target.dataset.size == 'large'){
         event.target.classList.add('active')
-        price.textContent = '20';}
+        price.textContent =  pizzaOptions[cardId][2].price}
     }
     // buttons for thin or thick dough
     const btnThin = cardWrapper.querySelector('[data-dough="thin"]')

@@ -1,5 +1,6 @@
 import {productID} from './orderCart.js'
-import {price, btnActive} from './main.js'
+import {price, btnActive, cardId} from './main.js'
+import { pizzaOptions } from './itemsObjects.js'
 
 let productsInCart = []
 export function updateProductsInCart(product){
@@ -24,7 +25,7 @@ function removeActivBtn(buttons){
         let WrapperProductId = WrapperCardId.querySelector('.addToCart')
        if (WrapperCardId.dataset.cardId == productID){
         button.classList.remove('active')
-        price.textContent = '0';
+        price.textContent =  pizzaOptions[cardId][1].price
        }
     })
 }
