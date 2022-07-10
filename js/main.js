@@ -1,5 +1,5 @@
 export let price, btnActive, cardId
-import { pizzaOptions } from "./itemsObjects.js"
+import { pizzaOptions } from "./pizzaOptions.js"
 const l = console.log
 
 
@@ -25,7 +25,7 @@ window.addEventListener( 'click', function(event){
      if(event.target.dataset.size == "small"){
         event.target.classList.add("active")
         price.textContent = pizzaOptions[cardId][0].price
-        l(piccaPrices[cardId][0].name)
+     
 
         }
    

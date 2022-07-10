@@ -1,4 +1,4 @@
-import { updateProductsInCart } from "./functions.js"
+import { updateProductsInCart, productsInCart } from "./functions.js"
 export let  productID;
 const products = document.querySelectorAll('.productInCart')// variable for loop with or
 const innerCart = document.querySelector('.innerCart')
