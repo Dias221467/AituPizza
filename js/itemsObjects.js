@@ -7,7 +7,7 @@ const pizzArrayCards = document.querySelectorAll('.card')
 
 function addInforPizzaToFront(items){
     items.forEach(item=>{
-        item.quzzySelector('.title').textContent = pizzaOptions[item.dataset.cardId][0].name;
+        item.querySelector('.title').textContent = pizzaOptions[item.dataset.cardId][0].name;
         item.querySelector('.description').textContent = pizzaOptions[item.dataset.cardId][0].description;
         item.querySelector('img').src = pizzaOptions[item.dataset.cardId][0].image;
         item.querySelector('.price span').textContent = pizzaOptions[item.dataset.cardId][1].price;
