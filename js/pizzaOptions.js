@@ -34,18 +34,93 @@ export const pizzaOptions =
     description: 'Bacon, Chicken, Onion, Pickled cucumbers, Fresh tomatoes, Mozzarella cheese' ,
     image:'/images/picca/royal.png'},
     {size:'28sm', price:'20'},
-    {size:'33sm', price:'25'}]     
+    {size:'33sm', price:'25'}]
+,         
+5:[
+    {size:'20sm', price:'12', 
+    name: 'Chicken Sweet Chili',
+    description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
+    image:'/images/picca/Chicken Sweet Chili.png'},
+    {size:'28sm', price:'14'},
+    {size:'33sm', price:'19'}] 
+,
+
+6:[
+    {size:'20sm', price:'20', 
+    name: '4 Cheese',
+    description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
+    image:'/images/picca/4 Cheese.png'},
+    {size:'28sm', price:'28'},
+    {size:'33sm', price:'36'}] 
+,
+
+7:[
+    {size:'20sm', price:'14', 
+    name: 'Carbonara',
+    description: ' Onion, Mozzarella cheese, Olives, Chicken, Onion, Mozzarella cheese, Olives',
+    image:'/images/picca/Carbonara.png'},
+    {size:'28sm', price:'19'},
+    {size:'33sm', price:'27'}] 
+,
+
+8:[
+    {size:'20sm', price:'16', 
+    name: 'Double Pepperoni',
+    description: 'Chicken, Onion, Mozzarella cheese, Olives, Fresh tomatoes, Mozzarella cheese' ,
+    image:'/images/picca/Double Pepperoni.png'},
+    {size:'28sm', price:'24'},
+    {size:'33sm', price:'29'}] 
+,         
+9:[
+    {size:'20sm', price:'12', 
+    name: 'Chicken Sweet Chili',
+    description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
+    image:'/images/picca/Chicken Sweet Chili.png'},
+    {size:'28sm', price:'14'},
+    {size:'33sm', price:'19'}] 
+,
+
+10:[
+    {size:'20sm', price:'20', 
+    name: '4 Cheese',
+    description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
+    image:'/images/picca/4 Cheese.png'},
+    {size:'28sm', price:'28'},
+    {size:'33sm', price:'36'}] 
+,
+
+11:[
+    {size:'20sm', price:'14', 
+    name: 'Carbonara',
+    description: ' Onion, Mozzarella cheese, Olives, Chicken, Onion, Mozzarella cheese, Olives',
+    image:'/images/picca/Carbonara.png'},
+    {size:'28sm', price:'19'},
+    {size:'33sm', price:'27'}] 
+,
+
+12:[
+    {size:'20sm', price:'16', 
+    name: 'Double Pepperoni',
+    description: 'Chicken, Onion, Mozzarella cheese, Olives, Fresh tomatoes, Mozzarella cheese' ,
+    image:'/images/picca/Double Pepperoni.png'},
+    {size:'28sm', price:'24'},
+    {size:'33sm', price:'29'}] 
+
+
  }
 
-
-
-
  //___________________________________________________________________________________________________
-//  addInfoPizzaToFront(pizzArrayCards)
+//  row first
 const pizzaOptionsLength =  Object.keys(pizzaOptions).length
- let d1 = document.getElementById('one');
+ let d1 = document.getElementById('first');
   
                   for (let i = 1; i<pizzaOptionsLength+1; ++i){
+                      if (i == 5)
+              { d1 = document.getElementById('second');}
+                  console.log(d1)
+                  if (i == 9)
+         { d1 = document.getElementById('third');}
+                      console.log(d1)
  d1.insertAdjacentHTML('beforeend', `  <div class="card" data-card-Id="${i}">
 
                 <div class="productInCart">
@@ -73,4 +148,5 @@ const pizzaOptionsLength =  Object.keys(pizzaOptions).length
              </div>
  
  `)
+                  
 };

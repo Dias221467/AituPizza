@@ -8,11 +8,15 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 45px;
-    padding-bottom: 30px;
     padding-left: 8%;
     padding-right: 8%;
     background-color: black; 
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    z-index: 3;
+    
+
 }
 
 .logo{display: flex;
@@ -55,16 +59,24 @@ nav ul li a:hover{
 }
 
 main{
+    padding-top: 100px;
     background-color: #f3f3f7;
-    padding: 30px;
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 10%;
 }
+
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .row .card{
     display: inline-block;
-    margin: 10px;
-}
+    margin: 8px;
+}    
+
 
 .card{
     background-color: #FFF;
@@ -152,6 +164,32 @@ label:active{
     padding-top: 5%;
 }
 
-/* .card img{
-    width:10px;
-} */
+.modal{
+    position: fixed;
+    left: 65%;
+    z-index: 2;
+    background-color:#f3f3f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+    border-radius: 10px;
+    margin-right: 8%;
+    width: 383px;
+    height: 450px;
+    overflow: scroll;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+   
+}
+
+.modal.active{
+    transform: scale(1);
+}
+
+.modal-header .close-cart{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}

@@ -24,12 +24,8 @@ window.addEventListener( 'click', function(event){
 
      if(event.target.dataset.size == "small"){
         event.target.classList.add("active")
-        price.textContent = pizzaOptions[cardId][0].price
-     
-
-        }
+        price.textContent = pizzaOptions[cardId][0].price}
    
-
      else if(event.target.dataset.size == 'medium'){
         event.target.classList.add('active')
         price.textContent =  pizzaOptions[cardId][1].price}

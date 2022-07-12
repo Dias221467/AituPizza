@@ -1,5 +1,5 @@
 import { updateItemInTheCart } from "./functions.js"
-import { pizzaOptions } from "./pizzaOptions.js";
+import {btnActive} from './main.js'
 export let  productID;
 const products = document.querySelectorAll('.productInCart')// variable for loop with or
 const innerCart = document.querySelector('.innerCart')
@@ -26,8 +26,8 @@ products.forEach(product =>{
                 price: +productPrice,
                 basePrice: +productPrice,
             }
-        
-            updateItemInTheCart(productToCart, itemInTheCart) }  })
+          
+            updateItemInTheCart(productToCart, itemInTheCart, btnActive) }  })
 })           
 
 

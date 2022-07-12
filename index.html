@@ -10,6 +10,7 @@
     <title>Romino's</title>
 </head>
 <body>
+
     <header>
         <nav>
             <div class="logo"> 
@@ -23,17 +24,58 @@
                 <li><a href="#">drinks</a></li>
                 <li><a href="#">soucess</a></li>
             </ul>
-            <a href="#">
-                <img class="cart" src="/images/cart.png" alt="" width="60px">
-                
+            <a href="#" class="button" data-cart-target="#modal">
+                <img class="cart"  data-cart-target="#modal" src="/images/cart.png" alt="" width="60px">
+            
             </a>
         </nav>
+        
 
     </header>
+    <div class="window">
+        <!-- <button>open model</button> -->
+        <div class="modal" id="'modal">
+            <div class="modal-header">   
+                <button class="close-cart" data-cart-close>&times;</button>
+                <div class="title">Modal Title</div>
+            </div>
+            <div class="modal-body">
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat enim 
+               possimus repellat dolor, fugit illo qui! Animi dolores quaerat accusamus
+                odio in totam illo aliquid suscipit. Deserunt dolorem quidem quam in voluptate, 
+                ipsam facilis libero praesentium aliquid exercitationem quibusdam eum non voluptatem 
+                autem, et ea. Blanditiis deserunt ab possimus nemo, modi voluptatibus? Non blanditiis 
+                commodi id in! Delectus autem facere corrupti nihil. Eius quae nihil accusantium 
+                laboriosam porro debitis maxime sequi earum praesentium ipsum omnis autem blanditiis
+                 tenetur quas tempora est deserunt illum ex eligendi, modi architecto. Inventore ipsa 
+                 repellendus eligendi et animi in ducimus maxime, nihil quas aliquid ab suscipit deserunt 
+                 minus laborum possimus error quasi itaque tempora molestias enim. Labore dicta distinctio
+                  commodi. Quia dolore magnam similique tempora? Deleniti corporis minus esse repudiandae
+                   quos rerum, voluptate corrupti! Ut ipsam, ab blanditiis impedit nostrum illum aut quos 
+                   harum, autem quae iste. Distinctio quod saepe quis eum, nemo cumque quae eius minus? 
+                   Nihil architecto nesciunt necessitatibus quam laudantium iure cupiditate maiores 
+                   dolores hic pariatur, suscipit error explicabo dignissimos quia fuga repellat totam
+                    aspernatur, non ea, quas id! Magnam at modi sequi illum corporis
+                quibusdam eveniet reprehenderit, sit quos fugit architecto fuga deleniti quaerat! 
+                Tempore iure eligendi laudantium ea quod. Rerum.
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    
     <main>
 
-        <div class="row" id="one"> </div>
+        <div class="row" id="first"> </div>
+
         <button class="innerCart">innercart</button>
+        <div class="row" id="second"> </div>
+
+        <button class="innerCart">innercart</button>
+
+        <div class="row" id="third"> </div>
+
+        <button class="innerCart">innercart</button>
+
 
     </main>
     <footer>
@@ -43,5 +85,6 @@
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/orderCart.js"></script>
     <script type="module" src="/js/pizzaOptions.js"></script>
+    <script type="module" src="/js/cart.js"></script>
 </body>
 </html>
