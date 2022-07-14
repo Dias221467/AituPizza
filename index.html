@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/modal.css">
     <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
     <title>Romino's</title>
 </head>
+
 <body>
 
     <header>
         <nav>
-            <div class="logo"> 
+            <div class="logo">
                 <img src="/images/logo.png" alt="" width="50px">
                 <h2 class="logo-text">Romi<span>no's</span></h2>
             </div>
-           
+
             <ul>
                 <li><a href="#">picca</a></li>
                 <li><a href="#">dessert</a></li>
                 <li><a href="#">drinks</a></li>
                 <li><a href="#">soucess</a></li>
             </ul>
-            <a href="#" class="button" data-cart-target="#modal">
-                <img class="cart"  data-cart-target="#modal" src="/images/cart.png" alt="" width="60px">
-            
+            <a href="#" class="button-cart">
+                <img class="cart" src="/images/cart.png" alt="" width="60px">
+
             </a>
         </nav>
-        
+
 
     </header>
-    <div class="window">
-        <!-- <button>open model</button> -->
-        <div class="modal" id="'modal">
-            <div class="modal-header">   
-                <button class="close-cart" data-cart-close>&times;</button>
-                <div class="title">Modal Title</div>
+    <!-- <button>open model</button> -->
+    <div class="modalwrapper" id="modal-wrapper">
+        <div class="modal" >
+
+            <div class="modal__header">
+                <div class="modal__title">
+                    <h3>Shoping Cart</h3>
+                    <h3>Items</h3>
+
+                </div>
+                <hr>
             </div>
-            <div class="modal-body">
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat enim 
-               possimus repellat dolor, fugit illo qui! Animi dolores quaerat accusamus
-                odio in totam illo aliquid suscipit. Deserunt dolorem quidem quam in voluptate, 
-                ipsam facilis libero praesentium aliquid exercitationem quibusdam eum non voluptatem 
-                autem, et ea. Blanditiis deserunt ab possimus nemo, modi voluptatibus? Non blanditiis 
-                commodi id in! Delectus autem facere corrupti nihil. Eius quae nihil accusantium 
-                laboriosam porro debitis maxime sequi earum praesentium ipsum omnis autem blanditiis
-                 tenetur quas tempora est deserunt illum ex eligendi, modi architecto. Inventore ipsa 
-                 repellendus eligendi et animi in ducimus maxime, nihil quas aliquid ab suscipit deserunt 
-                 minus laborum possimus error quasi itaque tempora molestias enim. Labore dicta distinctio
-                  commodi. Quia dolore magnam similique tempora? Deleniti corporis minus esse repudiandae
-                   quos rerum, voluptate corrupti! Ut ipsam, ab blanditiis impedit nostrum illum aut quos 
-                   harum, autem quae iste. Distinctio quod saepe quis eum, nemo cumque quae eius minus? 
-                   Nihil architecto nesciunt necessitatibus quam laudantium iure cupiditate maiores 
-                   dolores hic pariatur, suscipit error explicabo dignissimos quia fuga repellat totam
-                    aspernatur, non ea, quas id! Magnam at modi sequi illum corporis
-                quibusdam eveniet reprehenderit, sit quos fugit architecto fuga deleniti quaerat! 
-                Tempore iure eligendi laudantium ea quod. Rerum.
+          <div id="modal">
+            <!-- <div class="modal__body">
+                <div class="modal__items-1">
+                    <img src="/images/picca/Chicken Sweet Chili.png" alt="">
+                    <div class="modal__item-details">
+                        <p class="modal__item-title">Margarita</p>
+                        <p class="modal__size">medium</p>
+                        <p class="modal__dough">thick</p>
+                    </div>
+                </div>
+                <div class="modal__items-2">
+                    <div class="modal__conter-wrapper">
+                        <div class="modal__minus">-</div>
+                        <div class="modal__counter">$<span>0</span></div>
+                        <div class="modal__plus">&#43;</div>
+                    </div>
+                    <div class="modal__price">$ <span>0</span> </div>
+                    <div class="modal__total">$<span>0</span></div>
+                </div>
+            </div> -->
+         </div>
+            <div class="modal__footer">
+                <hr>
+                <div class="modal__total-price">
+                    <p>TOTAL</p>
+                    <p>$<span>0</span></p>
+                </div>
             </div>
+
         </div>
-        <div class="overlay"></div>
     </div>
-    
+
     <main>
 
         <div class="row" id="first"> </div>
@@ -79,6 +95,7 @@
 
     </main>
     <footer>
+
     </footer>
 
     <script type="module" src="/js/functions.js"></script>
@@ -87,4 +104,5 @@
     <script type="module" src="/js/pizzaOptions.js"></script>
     <script type="module" src="/js/cart.js"></script>
 </body>
+
 </html>

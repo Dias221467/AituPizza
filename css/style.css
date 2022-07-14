@@ -166,18 +166,19 @@ label:active{
 
 .modal{
     position: fixed;
-    left: 65%;
+    left: 50%;
     z-index: 2;
     background-color:#f3f3f7;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5); 
     border-radius: 10px;
-    margin-right: 8%;
-    width: 383px;
+    margin-right: 10%;
+    width: 600px;
     height: 450px;
     overflow: scroll;
     transform: scale(0);
     transition: 200ms ease-in-out;
+    margin-top: 60px;
    
 }
 
@@ -193,3 +194,4 @@ label:active{
     font-weight: bold;
 
 }
+

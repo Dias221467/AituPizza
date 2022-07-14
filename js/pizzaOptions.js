@@ -112,15 +112,16 @@ export const pizzaOptions =
  //___________________________________________________________________________________________________
 //  row first
 const pizzaOptionsLength =  Object.keys(pizzaOptions).length
+
  let d1 = document.getElementById('first');
   
                   for (let i = 1; i<pizzaOptionsLength+1; ++i){
                       if (i == 5)
               { d1 = document.getElementById('second');}
-                  console.log(d1)
+ 
                   if (i == 9)
          { d1 = document.getElementById('third');}
-                      console.log(d1)
+          
  d1.insertAdjacentHTML('beforeend', `  <div class="card" data-card-Id="${i}">
 
                 <div class="productInCart">

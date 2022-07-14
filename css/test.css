@@ -1,9 +1,0 @@
-html {font: 300 2ch/1.2 'Segoe UI'}
-form {display:flex;}
-h1, h2 {margin:0;}
-fieldset {width:max-content;margin-bottom:8px;}
-label {display:inline-block;margin-bottom:8px;}
-[type='radio'] {transform: translateY(1.5px)}
-select {width:10rem;font:inherit;margin-bottom:8px;}
-output::before {content:'$';}
-.instructions {margin-left: 12px;float:right;transform:translateY(-100%)}

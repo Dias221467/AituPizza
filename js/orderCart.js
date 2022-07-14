@@ -1,10 +1,12 @@
 import { updateItemInTheCart } from "./functions.js"
 import {btnActive} from './main.js'
+import { startUp } from "./cart.js";
 export let  productID;
+export let itemInTheCart = [];
 const products = document.querySelectorAll('.productInCart')// variable for loop with or
 const innerCart = document.querySelector('.innerCart')
 let productToCart //an object containing orders to be sent to the cart
-let itemInTheCart = []
+
 
 // creating an object containing order parameters
 products.forEach(product =>{
@@ -27,7 +29,13 @@ products.forEach(product =>{
                 basePrice: +productPrice,
             }
           
-            updateItemInTheCart(productToCart, itemInTheCart, btnActive) }  })
+            updateItemInTheCart(productToCart, itemInTheCart, btnActive)
+             startUp(itemInTheCart)
+        
+        }  
+    
+    })
+           
 })           
 
 
