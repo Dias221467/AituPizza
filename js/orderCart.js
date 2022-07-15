@@ -1,3 +1,5 @@
+//variables
+//====================================================================================================
 import {btnActive, price, cardId} from './main.js'
 import {pizzaOptions} from './pizzaOptions.js'
 let itemInTheCart = []
@@ -7,7 +9,8 @@ const innerCart = document.querySelector('.innerCart')
 let productToCart //an object containing orders to be sent to the cart
 
 
-// creating an object containing order parameters
+// function creating an object containing order parameters
+//========================================================================================
 products.forEach(product => {product.addEventListener('click', function(event){
         if (event.target.classList.contains('addToCart')){
             productID = event.target.dataset.productId;
@@ -26,25 +29,13 @@ products.forEach(product => {product.addEventListener('click', function(event){
                 price: +productPrice,
                 basePrice: +productPrice,
             }
-          
-            updateItemInTheCart(productToCart, itemInTheCart, btnActive)
-       
-        
-        }  
-    
-    })
-           
-})           
+             updateItemInTheCart(productToCart, itemInTheCart, btnActive)
+               }
+           })      
+} )           
+//==========================================================================================
 
-
-// innerCart.addEventListener('click', function(event){
-   
-//     if (event.target.classList.contains('innerCart')){
-//        console.log(itemInTheCart)
-
-//     }
-// })
-
+//==========================================================================================
 function updateItemInTheCart(){
     for(let i = 0 ; i < itemInTheCart.length; ++i){
         if (itemInTheCart[i].id == productToCart.id && itemInTheCart[i].size == productToCart.size && 
@@ -57,10 +48,10 @@ function updateItemInTheCart(){
 
    itemInTheCart.push(productToCart)
    removeActivBtn(btnActive)}
+//==========================================================================================   
 
-
-
-
+//  function for clear buttons after push "Add to cart"
+//==========================================================================================
    function removeActivBtn(buttons){
     buttons.forEach(button=>{
         let WrapperCardId = button.closest('.card')
@@ -71,3 +62,19 @@ function updateItemInTheCart(){
        }
     })
 }
+//==========================================================================================
+
+
+
+
+
+
+// innerCart.addEventListener('click', function(event){
+   
+//     if (event.target.classList.contains('innerCart')){
+//        console.log(itemInTheCart)
+
+//     }
+// })
+
+// funciton add items to cart after order

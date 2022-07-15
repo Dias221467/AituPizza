@@ -1,9 +1,12 @@
+//variables
+//====================================================================================================
 export let price, btnActive, cardId
 import { pizzaOptions } from "./pizzaOptions.js"
+const modal = document.querySelector('.modal')
 const l = console.log
 
-
-
+ // function for addclistener for all window elements
+//====================================================================================================
 window.addEventListener( 'click', function(event){
     // buttons for size picca and price
     if (event.target.closest('.card')){
@@ -15,8 +18,10 @@ window.addEventListener( 'click', function(event){
     const btnActiveLarge = cardWrapper.querySelector('[data-size="large"]')
 
     price = cardWrapper.querySelector('.price span')// variable for price
-    
-    // loop for swtich on/off size buttons
+//====================================================================================================
+
+    // loop for swtich on/off size-pizza buttons
+//====================================================================================================    
     if (event.target.className == 'btnActive'){
         btnActiveSmall.classList.remove('active')
         btnActiveMedium.classList.remove('active')
@@ -34,7 +39,10 @@ window.addEventListener( 'click', function(event){
         event.target.classList.add('active')
         price.textContent =  pizzaOptions[cardId][2].price}
     }
-    // buttons for thin or thick dough
+//====================================================================================================
+
+    // buttons for thin or thick pizza dough
+//====================================================================================================    
     const btnThin = cardWrapper.querySelector('[data-dough="thin"]')
     const btnThick = cardWrapper.querySelector('[data-dough="thick"]')
     
@@ -47,5 +55,18 @@ window.addEventListener( 'click', function(event){
         btnThin.classList.remove('active')} 
 }
 })
+//====================================================================================================
 
 
+// function for turn on and turn off modal window for cart 
+//====================================================================================================
+window.addEventListener('click', function (event){
+  if ( event.target.classList.contains('cart') && !modal.classList.contains('active')){
+           modal.classList.add('active')
+            
+  }
+  else if ( event.target.classList.contains('cart') &&  modal.classList.contains('active')){
+             modal.classList.remove('active')
+  }
+})
+//====================================================================================================
