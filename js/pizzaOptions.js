@@ -1,6 +1,6 @@
-// import { addInfoPizzaToFront } from "./functions.js";
-const pizzArrayCards = document.querySelectorAll('.card')
-let insertInHtml
+// // import { addInfoPizzaToFront } from "./functions.js";
+// const pizzArrayCards = document.querySelectorAll('.card')
+// let insertInHtml
 export const pizzaOptions = 
 {1:[
     {size:'20sm', 

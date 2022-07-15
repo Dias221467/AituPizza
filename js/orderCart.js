@@ -1,16 +1,14 @@
-import { updateItemInTheCart } from "./functions.js"
-import {btnActive} from './main.js'
-import { startUp } from "./cart.js";
-export let  productID;
-export let itemInTheCart = [];
+import {btnActive, price, cardId} from './main.js'
+import {pizzaOptions} from './pizzaOptions.js'
+let itemInTheCart = []
+let productID
 const products = document.querySelectorAll('.productInCart')// variable for loop with or
 const innerCart = document.querySelector('.innerCart')
 let productToCart //an object containing orders to be sent to the cart
 
 
 // creating an object containing order parameters
-products.forEach(product =>{
-    product.addEventListener('click', function(event){
+products.forEach(product => {product.addEventListener('click', function(event){
         if (event.target.classList.contains('addToCart')){
             productID = event.target.dataset.productId;
             const productName = product.querySelector('.title').textContent;
@@ -30,7 +28,7 @@ products.forEach(product =>{
             }
           
             updateItemInTheCart(productToCart, itemInTheCart, btnActive)
-             startUp(itemInTheCart)
+       
         
         }  
     
@@ -39,11 +37,37 @@ products.forEach(product =>{
 })           
 
 
-innerCart.addEventListener('click', function(event){
+// innerCart.addEventListener('click', function(event){
    
-    if (event.target.classList.contains('innerCart')){
-       console.log(itemInTheCart)
+//     if (event.target.classList.contains('innerCart')){
+//        console.log(itemInTheCart)
 
-    }
-})
+//     }
+// })
 
+function updateItemInTheCart(){
+    for(let i = 0 ; i < itemInTheCart.length; ++i){
+        if (itemInTheCart[i].id == productToCart.id && itemInTheCart[i].size == productToCart.size && 
+             itemInTheCart[i].dough == productToCart.dough){
+
+            itemInTheCart[i].count += 1
+            itemInTheCart[i].price = itemInTheCart[i].basePrice * itemInTheCart[i].count
+            removeActivBtn(btnActive) 
+            return;}}
+
+   itemInTheCart.push(productToCart)
+   removeActivBtn(btnActive)}
+
+
+
+
+   function removeActivBtn(buttons){
+    buttons.forEach(button=>{
+        let WrapperCardId = button.closest('.card')
+        let WrapperProductId = WrapperCardId.querySelector('.addToCart')
+       if (WrapperCardId.dataset.cardId == productID){
+        button.classList.remove('active')
+        price.textContent =  pizzaOptions[cardId][1].price
+       }
+    })
+}
