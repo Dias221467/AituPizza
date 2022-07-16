@@ -164,34 +164,4 @@ label:active{
     padding-top: 5%;
 }
 
-.modal{
-    position: fixed;
-    left: 50%;
-    z-index: 2;
-    background-color:#f3f3f7;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
-    border-radius: 10px;
-    margin-right: 10%;
-    width: 600px;
-    height: 450px;
-    overflow: scroll;
-    transform: scale(0);
-    transition: 200ms ease-in-out;
-    margin-top: 60px;
-   
-}
-
-.modal.active{
-    transform: scale(1);
-}
-
-.modal-header .close-cart{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-
-}
 

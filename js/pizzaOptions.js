@@ -6,7 +6,7 @@ export const pizzaOptions =
 {1:[
     {size:'20sm', 
     price:'12', 
-    name:'Vedzhi Fit & Fresh', 
+    name:'Vedzhi', 
     description: 'Mushrooms, Olives, Fresh tomatoes, Mozzarella cheese,  Feta cheese, Tomato sauce',
     image: '/images/picca/Vedzhi Fit & Fresh.png'},
     {size:'28sm', price:'16'},
@@ -14,7 +14,7 @@ export const pizzaOptions =
 
 2:[
     {size:'20sm', price:'14', 
-    name: 'Four seasons',
+    name: '4 seasons',
     description: 'Bacon, Ham, Mushrooms, Chicken, Onion, Olives, Pickled Cucumbers, Hunting sausages, Pepperoni',
     image:'/images/picca/4-seasons.png'},
     {size:'28sm', price:'17'},
@@ -22,7 +22,7 @@ export const pizzaOptions =
 
 3:[
     {size:'20sm', price:'18', 
-    name: 'Chicken Teriyaki',
+    name: 'Teriyaki',
     description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
     image:'/images/picca/chiken.png'},
     {size:'28sm', price:'21'},
@@ -30,7 +30,7 @@ export const pizzaOptions =
 
 4:[
     {size:'20sm', price:'15', 
-    name: 'Royal Cheeseburger',
+    name: 'Royal Fresh',
     description: 'Bacon, Chicken, Onion, Pickled cucumbers, Fresh tomatoes, Mozzarella cheese' ,
     image:'/images/picca/royal.png'},
     {size:'28sm', price:'20'},
@@ -38,7 +38,7 @@ export const pizzaOptions =
 
 5:[
     {size:'20sm', price:'12', 
-    name: 'Chicken Sweet Chili',
+    name: 'Sweet Chili',
     description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
     image:'/images/picca/Chicken Sweet Chili.png'},
     {size:'28sm', price:'14'},
@@ -62,14 +62,14 @@ export const pizzaOptions =
 
 8:[
     {size:'20sm', price:'16', 
-    name: 'Double Pepperoni',
+    name: 'Pepperoni',
     description: 'Chicken, Onion, Mozzarella cheese, Olives, Fresh tomatoes, Mozzarella cheese' ,
     image:'/images/picca/Double Pepperoni.png'},
     {size:'28sm', price:'24'},
     {size:'33sm', price:'29'}],         
 9:[
     {size:'20sm', price:'12', 
-    name: 'Chicken Sweet Chili',
+    name: 'Sweet Chili',
     description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
     image:'/images/picca/Chicken Sweet Chili.png'},
     {size:'28sm', price:'14'},
@@ -93,7 +93,7 @@ export const pizzaOptions =
 
 12:[
     {size:'20sm', price:'16', 
-    name: 'Double Pepperoni',
+    name: 'Double',
     description: 'Chicken, Onion, Mozzarella cheese, Olives, Fresh tomatoes, Mozzarella cheese' ,
     image:'/images/picca/Double Pepperoni.png'},
     {size:'28sm', price:'24'},

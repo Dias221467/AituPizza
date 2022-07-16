@@ -5,7 +5,7 @@ import { pizzaOptions } from "./pizzaOptions.js"
 const modal = document.querySelector('.modal')
 const l = console.log
 
- // function for addclistener for all window elements
+ // function for addListener for all window elements
 //====================================================================================================
 window.addEventListener( 'click', function(event){
     // buttons for size picca and price
@@ -20,7 +20,7 @@ window.addEventListener( 'click', function(event){
     price = cardWrapper.querySelector('.price span')// variable for price
 //====================================================================================================
 
-    // loop for swtich on/off size-pizza buttons
+    // pizza size button
 //====================================================================================================    
     if (event.target.className == 'btnActive'){
         btnActiveSmall.classList.remove('active')
@@ -70,3 +70,9 @@ window.addEventListener('click', function (event){
   }
 })
 //====================================================================================================
+
+//a function that opens and closes shopping cart modal-window
+//====================================================================================================
+window.addEventListener('click', function (event) {
+  event.target.classList.contains('cart') && modal.classList.contains('active') ? 
+                                    modal.classList.add('active') :modal.classList.remove('active')})
