@@ -33,8 +33,7 @@ products.forEach(product => {
             }
             updateItemOrder()
             updateHtmlCart()
-
-
+            totalCartPrice()
 
         }
     })
@@ -50,7 +49,7 @@ function updateItemOrder() {
             itemCart[i].dough == ItemsOrder.dough) {
 
             itemCart[i].count += 1
-            itemCart[i].basePrice = itemCart[i].basePrice * itemCart[i].count
+            itemCart[i].basePrice = itemCart[i].price * itemCart[i].count
             removeActivBtn(btnActive)
             return;
         }
@@ -74,7 +73,6 @@ function removeActivBtn(buttons) {
 
 
 //==========================================================================================
-
 function updateHtmlCart() {
     if (itemCart.length > 0) {
 
@@ -95,25 +93,18 @@ function updateHtmlCart() {
                                 <div class="modal__counter">$<span>${itemCart.count}</span></div>
                                 <div class="modal__plus">&#43;</div>
                         </div>
-                        <div class="modal__price">$ <span>${itemCart.price*2}</span> </div>
+                        <div class="modal__price">$ <span>${itemCart.price}</span> </div>
                         <div class="modal__total">$<span>${itemCart.basePrice}</span></div>
                      </div> `});
-        
-
-
-        // const sum = users.reduce((acc, user) => {
-        //     const newAcc = acc + user.amount;
-        //     return newAcc;
-        //   }, 0);
-
-        console.log(total)     
-        buyItems.innerHTML = result.join('')
-        
-    }
-
-    else {
-        buyItems.innerHTML = `<h4>Cart is empty</h4>`
+        buyItems.innerHTML = result.join('')     
     }
 }
+//==========================================================================================
 
-
+//==========================================================================================
+function totalCartPrice(){
+    if (itemCart.length > 0){
+        let result = itemCart.map((total) => total+=item.price )
+        }
+    } 
+     
