@@ -3,6 +3,7 @@
 export let price, btnActive, cardId
 import { pizzaOptions } from "./pizzaOptions.js"
 const modal = document.querySelector('.modal')
+const cart = document.querySelector('.cart')
 const l = console.log
 
  // function for addListener for all window elements
@@ -73,6 +74,6 @@ window.addEventListener('click', function (event){
 
 //a function that opens and closes shopping cart modal-window
 //====================================================================================================
-window.addEventListener('click', function (event) {
+cart.addEventListener('click', function (event) {
   event.target.classList.contains('cart') && modal.classList.contains('active') ? 
                                     modal.classList.add('active') :modal.classList.remove('active')})

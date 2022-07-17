@@ -28,7 +28,7 @@
                 <li><a href="#">soucess</a></li>
             </ul>
             <a class="button-cart">
-                <img class="cart" src="/images/cart.png" alt="" width="60px">
+                <img class="cart" src="/images/cart.png" data-cart-btn="modal" width="60px">
 
             </a>
         </nav>
@@ -56,8 +56,9 @@
                 <footer>
                     <hr>
                     <div class="modal__total-price">
+                        <button class="modal__buy-btn" data-cart-btn="buy">buy</button>
                         <p>TOTAL</p>
-                        <p>$<span>0</span></p>
+                        <p>$<span class="modal__total-span">0</span></p>
                     </div>
                 
                 </footer>

@@ -5,10 +5,11 @@ import { pizzaOptions } from './pizzaOptions.js'
 let itemCart = []
 let productID
 let ItemsOrder
-let total = 0
 let buyItems = document.querySelector('#buyItems')
 const products = document.querySelectorAll('.productInCart')
-
+let total = document.querySelector('.modal__total-span')
+let sum = 0
+let HtmlTotalPrice  
 
 // function creating an object containing order parameters
 //========================================================================================
@@ -33,8 +34,11 @@ products.forEach(product => {
             }
             updateItemOrder()
             updateHtmlCart()
-            totalCartPrice()
-
+            HtmlTotalPrice = buyItems.querySelectorAll('.modal__total span')
+         
+              totalPrice()
+       
+        
         }
     })
 })
@@ -50,12 +54,20 @@ function updateItemOrder() {
 
             itemCart[i].count += 1
             itemCart[i].basePrice = itemCart[i].price * itemCart[i].count
+            itemCart[i].basePrice = ItemsOrder.basePrice
             removeActivBtn(btnActive)
             return;
         }
+     
     }
+   
     itemCart.push(ItemsOrder)
     removeActivBtn(btnActive)
+
+ 
+
+    
+
 }
 //==========================================================================================   
 
@@ -66,7 +78,7 @@ function removeActivBtn(buttons) {
         let WrapperCardId = button.closest('.card');
         WrapperCardId.dataset.cardId == productID ? button.classList.remove('active') :
             price.textContent = pizzaOptions[cardId][1].price
-        console.log(pizzaOptions[cardId][1].price)
+       
     })
 }
 //==========================================================================================
@@ -76,7 +88,7 @@ function removeActivBtn(buttons) {
 function updateHtmlCart() {
     if (itemCart.length > 0) {
 
-        let result = itemCart.map(itemCart => {
+     let   result = itemCart.map(itemCart => {
           
             return ` <div class="modal__items">
                          <div class="modal__name-img"> 
@@ -96,15 +108,27 @@ function updateHtmlCart() {
                         <div class="modal__price">$ <span>${itemCart.price}</span> </div>
                         <div class="modal__total">$<span>${itemCart.basePrice}</span></div>
                      </div> `});
+               
         buyItems.innerHTML = result.join('')     
+       HtmlTotalPrice = buyItems.querySelectorAll('.modal__total span')
+ console.log(HtmlTotalPrice)
+   totalPrice()
     }
-}
+        
+        
+
+} 
+ 
+    
+
 //==========================================================================================
 
 //==========================================================================================
-function totalCartPrice(){
-    if (itemCart.length > 0){
-        let result = itemCart.map((total) => total+=item.price )
-        }
-    } 
-     
+
+function totalPrice(){ HtmlTotalPrice.forEach(totalPrice => {sum +=+totalPrice.textContent})
+total.textContent = sum}
+
+// function totalPrice(){
+//     sum+=(HtmlTotalPrice)
+//   totalSum.textContent = sum
+// }
