@@ -8,8 +8,9 @@ let ItemsOrder
 let buyItems = document.querySelector('#buyItems')
 const products = document.querySelectorAll('.productInCart')
 let total = document.querySelector('.modal__total-span')
-let sum = 0
-let HtmlTotalPrice  
+let totalId
+let sum = []
+
 
 // function creating an object containing order parameters
 //========================================================================================
@@ -34,10 +35,11 @@ products.forEach(product => {
             }
             updateItemOrder()
             updateHtmlCart()
-            HtmlTotalPrice = buyItems.querySelectorAll('.modal__total span')
-         
-              totalPrice()
        
+           
+
+         
+
         
         }
     })
@@ -53,8 +55,8 @@ function updateItemOrder() {
             itemCart[i].dough == ItemsOrder.dough) {
 
             itemCart[i].count += 1
-            itemCart[i].basePrice = itemCart[i].price * itemCart[i].count
-            itemCart[i].basePrice = ItemsOrder.basePrice
+            // itemCart[i].basePrice = ItemsOrder.price *  itemCart[i].count
+            itemCart[i].basePrice = ItemsOrder.basePrice * itemCart[i].count
             removeActivBtn(btnActive)
             return;
         }
@@ -64,6 +66,7 @@ function updateItemOrder() {
     itemCart.push(ItemsOrder)
     removeActivBtn(btnActive)
 
+    
  
 
     
@@ -105,17 +108,18 @@ function updateHtmlCart() {
                                 <div class="modal__counter">$<span>${itemCart.count}</span></div>
                                 <div class="modal__plus">&#43;</div>
                         </div>
-                        <div class="modal__price">$ <span>${itemCart.price}</span> </div>
-                        <div class="modal__total">$<span>${itemCart.basePrice}</span></div>
-                     </div> `});
-               
-        buyItems.innerHTML = result.join('')     
-       HtmlTotalPrice = buyItems.querySelectorAll('.modal__total span')
- console.log(HtmlTotalPrice)
-   totalPrice()
+                            <div class="modal__price">$ <span>${itemCart.price}</span> </div>
+                            <div class="modal__total">$<span id=${itemCart.id}>${itemCart.basePrice}</span></div>  
+                        </div> `});
+
+                  
+                    buyItems.innerHTML = result.join('')     
+                    countTheSumPrice()
+
     }
         
-        
+ 
+   
 
 } 
  
@@ -125,10 +129,9 @@ function updateHtmlCart() {
 
 //==========================================================================================
 
-function totalPrice(){ HtmlTotalPrice.forEach(totalPrice => {sum +=+totalPrice.textContent})
-total.textContent = sum}
-
-// function totalPrice(){
-//     sum+=(HtmlTotalPrice)
-//   totalSum.textContent = sum
-// }
+const countTheSumPrice = function(){
+    let sumPrice = 0;
+    itemCart.forEach(product =>{
+        sumPrice += product.basePrice
+}); return total.textContent = sumPrice
+}
