@@ -71,7 +71,7 @@ function removeActivBtn(buttons) {
         {
             button.classList.remove('active') 
             price.textContent = pizzaOptions[cardId][1].price
-        }
+        }фвв
     })
 }
 //==========================================================================================
