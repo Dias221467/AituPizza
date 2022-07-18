@@ -8,7 +8,8 @@ const l = console.log
 
  // function for addListener for all window elements
 //====================================================================================================
-window.addEventListener( 'click', function(event){
+window.addEventListener( 'click', function(event)
+{
     // buttons for size picca and price
     if (event.target.closest('.card')){
     const cardWrapper = event.target.closest('.card')
@@ -23,20 +24,24 @@ window.addEventListener( 'click', function(event){
 
     // pizza size button
 //====================================================================================================    
-    if (event.target.className == 'btnActive'){
+    if (event.target.className == 'btnActive')
+    {
         btnActiveSmall.classList.remove('active')
         btnActiveMedium.classList.remove('active')
         btnActiveLarge.classList.remove('active')
 
-     if(event.target.dataset.size == "small"){
+     if(event.target.dataset.size == "small")
+     {
         event.target.classList.add("active")
         price.textContent = pizzaOptions[cardId][0].price}
    
-     else if(event.target.dataset.size == 'medium'){
+     else if(event.target.dataset.size == 'medium')
+     {
         event.target.classList.add('active')
         price.textContent =  pizzaOptions[cardId][1].price}
 
-     else if(event.target.dataset.size == 'large'){
+     else if(event.target.dataset.size == 'large')
+     {
         event.target.classList.add('active')
         price.textContent =  pizzaOptions[cardId][2].price}
     }
@@ -47,13 +52,17 @@ window.addEventListener( 'click', function(event){
     const btnThin = cardWrapper.querySelector('[data-dough="thin"]')
     const btnThick = cardWrapper.querySelector('[data-dough="thick"]')
     
-    if (event.target.textContent == 'thin'){
+    if (event.target.textContent == 'thin')
+    {
         btnThin.classList.add('active')
-        btnThick.classList.remove('active')}
+        btnThick.classList.remove('active')
+    }
 
-    else if(event.target.textContent == 'thick'){
+    else if(event.target.textContent == 'thick')
+    {
         btnThick.classList.add('active')
-        btnThin.classList.remove('active')} 
+        btnThin.classList.remove('active')
+    } 
 }
 })
 //====================================================================================================
@@ -61,19 +70,14 @@ window.addEventListener( 'click', function(event){
 
 // function for turn on and turn off modal window for cart 
 //====================================================================================================
-window.addEventListener('click', function (event){
-  if ( event.target.classList.contains('cart') && !modal.classList.contains('active')){
-           modal.classList.add('active')
-            
+cart.addEventListener('click', function (event){
+  if ( event.target.classList.contains('cart') && !modal.classList.contains('active'))
+  {
+           modal.classList.add('active')     
   }
-  else if ( event.target.classList.contains('cart') &&  modal.classList.contains('active')){
+  else if ( event.target.classList.contains('cart') &&  modal.classList.contains('active'))
+  {
              modal.classList.remove('active')
   }
 })
 //====================================================================================================
-
-//a function that opens and closes shopping cart modal-window
-//====================================================================================================
-cart.addEventListener('click', function (event) {
-  event.target.classList.contains('cart') && modal.classList.contains('active') ? 
-                                    modal.classList.add('active') :modal.classList.remove('active')})

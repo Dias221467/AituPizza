@@ -8,9 +8,6 @@ let ItemsOrder
 let buyItems = document.querySelector('#buyItems')
 const products = document.querySelectorAll('.productInCart')
 let total = document.querySelector('.modal__total-span')
-let totalId
-let sum = []
-
 
 // function creating an object containing order parameters
 //========================================================================================
@@ -35,16 +32,12 @@ products.forEach(product => {
             }
             updateItemOrder()
             updateHtmlCart()
-       
-           
-
-         
-
-        
         }
     })
 })
 //==========================================================================================
+
+
 
 //a function responsible for adding items to the cart or increasing the quantity of the item if it has already been added
 //==========================================================================================
@@ -52,47 +45,43 @@ function updateItemOrder() {
     for (let i = 0; i < itemCart.length; ++i) {
         if (itemCart[i].id == ItemsOrder.id &&
             itemCart[i].size == ItemsOrder.size &&
-            itemCart[i].dough == ItemsOrder.dough) {
-
+            itemCart[i].dough == ItemsOrder.dough)
+         {
             itemCart[i].count += 1
             // itemCart[i].basePrice = ItemsOrder.price *  itemCart[i].count
             itemCart[i].basePrice = ItemsOrder.basePrice * itemCart[i].count
             removeActivBtn(btnActive)
             return;
         }
-     
     }
-   
     itemCart.push(ItemsOrder)
     removeActivBtn(btnActive)
-
-    
- 
-
-    
-
 }
+
 //==========================================================================================   
 
-//  function for clear buttons after push "Add to cart"
+//  a function that, after clicking "add cart", clears the buttons (pizza size and dough thickness) 
+//and displays the price on the screen for a medium-sized pizza
 //==========================================================================================
 function removeActivBtn(buttons) {
-    buttons.forEach(button => {
+    buttons.forEach(button => 
+        {
         let WrapperCardId = button.closest('.card');
-        WrapperCardId.dataset.cardId == productID ? button.classList.remove('active') :
+        if (WrapperCardId.dataset.cardId == productID) 
+        {
+            button.classList.remove('active') 
             price.textContent = pizzaOptions[cardId][1].price
-       
+        }
     })
 }
 //==========================================================================================
 
 
+//Function responsible for adding goods to cart with html form
 //==========================================================================================
 function updateHtmlCart() {
     if (itemCart.length > 0) {
-
      let   result = itemCart.map(itemCart => {
-          
             return ` <div class="modal__items">
                          <div class="modal__name-img"> 
                            <p class="modal__item-title">${itemCart.name}</p>
@@ -110,28 +99,21 @@ function updateHtmlCart() {
                         </div>
                             <div class="modal__price">$ <span>${itemCart.price}</span> </div>
                             <div class="modal__total">$<span id=${itemCart.id}>${itemCart.basePrice}</span></div>  
-                        </div> `});
-
-                  
+                        </div> `
+                    });
                     buyItems.innerHTML = result.join('')     
                     countTheSumPrice()
-
     }
-        
- 
-   
-
 } 
  
-    
-
+// Сalculation function for the summary total price in the cart
 //==========================================================================================
 
-//==========================================================================================
-
-const countTheSumPrice = function(){
+const countTheSumPrice = function()
+{
     let sumPrice = 0;
     itemCart.forEach(product =>{
         sumPrice += product.basePrice
-}); return total.textContent = sumPrice
+});
+ return total.textContent = sumPrice
 }
