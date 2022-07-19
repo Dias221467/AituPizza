@@ -17,7 +17,7 @@ export const pizzaOptions =
     price:'14', 
     name: '4 seasons',
     description: 'Bacon, Ham, Mushrooms, Chicken, Onion, Olives, Pickled Cucumbers, Hunting sausages, Pepperoni',
-    image:'/images/picca/4-seasons.png'},
+    image:'../images/picca/4-seasons.png'},
     {size:'28sm', price:'17'},
     {size:'33sm', price:'23'}],
 
