@@ -129,6 +129,6 @@ window.addEventListener('click', function(event){
             }    
         }
         updateHtmlCart()
- 
+
 }
 })
