@@ -17,7 +17,7 @@ export const pizzaOptions =
     price:'14', 
     name: '4 seasons',
     description: 'Bacon, Ham, Mushrooms, Chicken, Onion, Olives, Pickled Cucumbers, Hunting sausages, Pepperoni',
-    image:'../images/picca/4-seasons.png'},
+    image:'images/picca/4-seasons.png'},
     {size:'28sm', price:'17'},
     {size:'33sm', price:'23'}],
 
@@ -26,7 +26,7 @@ export const pizzaOptions =
     price:'18', 
     name: 'Teriyaki',
     description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
-    image:'/images/picca/chiken.png'},
+    image:'images/picca/chiken.png'},
     {size:'28sm', price:'21'},
     {size:'33sm', price:'28'}],
 
@@ -35,7 +35,7 @@ export const pizzaOptions =
     price:'15', 
     name: 'Royal Fresh',
     description: 'Bacon, Chicken, Onion, Pickled cucumbers, Fresh tomatoes, Mozzarella cheese' ,
-    image:'/images/picca/royal.png'},
+    image:'images/picca/royal.png'},
     {size:'28sm', price:'20'},
     {size:'33sm', price:'25'}],  
 
@@ -44,7 +44,7 @@ export const pizzaOptions =
     price:'12', 
     name: 'Sweet Chili',
     description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
-    image:'/images/picca/Chicken Sweet Chili.png'},
+    image:'images/picca/Chicken Sweet Chili.png'},
     {size:'28sm', price:'14'},
     {size:'33sm', price:'19'}],
 
@@ -52,7 +52,7 @@ export const pizzaOptions =
     {size:'20sm', price:'20', 
     name: '4 Cheese',
     description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
-    image:'/images/picca/4 Cheese.png'},
+    image:'images/picca/4 Cheese.png'},
     {size:'28sm', price:'28'},
     {size:'33sm', price:'36'}],
 
@@ -60,7 +60,7 @@ export const pizzaOptions =
     {size:'20sm', price:'14', 
     name: 'Carbonara',
     description: ' Onion, Mozzarella cheese, Olives, Chicken, Onion, Mozzarella cheese, Olives',
-    image:'/images/picca/Carbonara.png'},
+    image:'images/picca/Carbonara.png'},
     {size:'28sm', price:'19'},
     {size:'33sm', price:'27'}],
 
@@ -69,7 +69,7 @@ export const pizzaOptions =
     price:'16', 
     name: 'Pepperoni',
     description: 'Chicken, Onion, Mozzarella cheese, Olives, Fresh tomatoes, Mozzarella cheese' ,
-    image:'/images/picca/Double Pepperoni.png'},
+    image:'images/picca/Double Pepperoni.png'},
     {size:'28sm', price:'24'},
     {size:'33sm', price:'29'}],         
 9:[
@@ -77,7 +77,7 @@ export const pizzaOptions =
     price:'12', 
     name: 'Sweet Chili',
     description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
-    image:'/images/picca/Chicken Sweet Chili.png'},
+    image:'images/picca/Chicken Sweet Chili.png'},
     {size:'28sm', price:'14'},
     {size:'33sm', price:'19'}],
 
@@ -86,7 +86,7 @@ export const pizzaOptions =
     price:'20', 
     name: '4 Cheese',
     description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
-    image:'/images/picca/4 Cheese.png'},
+    image:'images/picca/4 Cheese.png'},
     {size:'28sm', price:'28'},
     {size:'33sm', price:'36'}],
 
@@ -95,7 +95,7 @@ export const pizzaOptions =
     price:'14', 
     name: 'Carbonara',
     description: ' Onion, Mozzarella cheese, Olives, Chicken, Onion, Mozzarella cheese, Olives',
-    image:'/images/picca/Carbonara.png'},
+    image:'images/picca/Carbonara.png'},
     {size:'28sm', price:'19'},
     {size:'33sm', price:'27'}],
 
@@ -104,7 +104,7 @@ export const pizzaOptions =
     price:'16', 
     name: 'Double',
     description: 'Chicken, Onion, Mozzarella cheese, Olives, Fresh tomatoes, Mozzarella cheese' ,
-    image:'/images/picca/Double Pepperoni.png'},
+    image:'images/picca/Double Pepperoni.png'},
     {size:'28sm', price:'24'},
     {size:'33sm', price:'29'}] 
  }

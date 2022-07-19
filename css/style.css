@@ -55,7 +55,7 @@ nav ul li a:hover{
     transform: scaleX(-1);
 }
 .cart:hover{
-    content: url(/images/cart-pink.png);
+    content: url(images/cart-pink.png);
 }
 
 main{
