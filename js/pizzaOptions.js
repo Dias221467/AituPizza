@@ -8,7 +8,7 @@ export const pizzaOptions =
     price:'12', 
     name:'Vedzhi', 
     description: 'Mushrooms, Olives, Fresh tomatoes, Mozzarella cheese,  Feta cheese, Tomato sauce',
-    image: '/images/picca/Vedzhi Fit & Fresh.png'},
+    image: 'images/picca/Vedzhi Fit & Fresh.png'},
     {size:'28sm', price:'16'},
     {size:'33sm', price:'20'}],
 
