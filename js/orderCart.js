@@ -2,6 +2,7 @@
 //====================================================================================================
 import { btnActive, price, cardId } from './main.js'
 import { pizzaOptions } from './pizzaOptions.js'
+import {totalPriceCart} from './cart.js'
 let itemCart = []
 let productID
 let ItemsOrder
@@ -71,7 +72,7 @@ function removeActivBtn(buttons) {
         {
             button.classList.remove('active') 
             price.textContent = pizzaOptions[cardId][1].price
-        }фвв
+        }
     })
 }
 //==========================================================================================
@@ -92,28 +93,42 @@ function updateHtmlCart() {
                                 <p class="modal__dough">${itemCart.dough}</p>
                         </div>
               
-                        <div class="modal__conter-wrapper">
-                                <div class="modal__minus">-</div>
-                                <div class="modal__counter">$<span>${itemCart.count}</span></div>
-                                <div class="modal__plus">&#43;</div>
+                        <div class="modal__counter-wrapper">
+                                <div class="modal__minus" data-id="${itemCart.id}" >-</div>
+                                <div class="modal__counter">${itemCart.count}</div>
+                                <div class="modal__plus" data-id="${itemCart.id}" >+</div>
                         </div>
                             <div class="modal__price">$ <span>${itemCart.price}</span> </div>
                             <div class="modal__total">$<span id=${itemCart.id}>${itemCart.basePrice}</span></div>  
                         </div> `
                     });
                     buyItems.innerHTML = result.join('')     
-                    countTheSumPrice()
+                    totalPriceCart(itemCart, total)
     }
 } 
  
-// Сalculation function for the summary total price in the cart
-//==========================================================================================
+//=================
 
-const countTheSumPrice = function()
-{
-    let sumPrice = 0;
-    itemCart.forEach(product =>{
-        sumPrice += product.basePrice
-});
- return total.textContent = sumPrice
+window.addEventListener('click', function(event){
+    let btnMinus = event.target.classList.contains('modal__minus')
+    let btnPlus = event.target.classList.contains('modal__plus')
+    if (btnMinus || btnPlus){
+        for (let i = 0; i < itemCart.length; i++){
+            if (itemCart[i].id == event.target.dataset.id){
+                if (btnMinus && itemCart[i].count > 0){
+                --itemCart[i].count
+     
+            }    
+                    
+                else if(btnPlus && itemCart[i].count < 20){
+                ++itemCart[i].count
+                }
+
+                itemCart[i].basePrice = itemCart[i].count * itemCart[i].price
+              
+            }    
+        }
+        updateHtmlCart()
+ 
 }
+})
