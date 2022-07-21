@@ -2,7 +2,10 @@
 //====================================================================================================
 import { btnActive, price, cardId } from './main.js'
 import { pizzaOptions } from './pizzaOptions.js'
-let itemCart = []
+let itemCart = JSON.parse(localStorage.getItem('ShoppingCart'));
+if(!itemCart){
+    itemCart = []
+}
 let productID
 let ItemsOrder
 let buyItems = document.querySelector('#buyItems')
@@ -101,6 +104,7 @@ function removeActivBtn(buttons) {
 //Function responsible for adding goods to cart with html form
 //==========================================================================================
 function updateHtmlCart() {
+    localStorage.setItem('ShoppingCart', JSON.stringify(itemCart));
     if (itemCart.length > 0) {
      let   result = itemCart.map(itemCart => {
             return ` <div class="modal__items">
@@ -167,3 +171,5 @@ const totalPriceCart = function()
 });
  return total.textContent = sumPrice
 }
+
+updateHtmlCart()
