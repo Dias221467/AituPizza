@@ -10,8 +10,8 @@
     border-radius: 10px;
     margin-right: 10%;
     width: 700px;
-    height: 450px;
-    overflow: scroll;
+    height: 500px;
+    /* overflow: scroll; */
     transform: scale(0);
     transition: 200ms ease-in-out;
     margin-top: 60px;
@@ -21,6 +21,11 @@
 
 .modal.active{
     transform: scale(1);
+}
+
+#modal__body{
+    height: 300px;
+    overflow: scroll;
 }
 
 .modal-header .close-cart{
@@ -55,6 +60,7 @@
    align-items: center;
    padding-left: 5%;
    padding-right: 5%;
+   padding-top: 2%;
    background-color: #fff;
 }
 
@@ -120,8 +126,8 @@
 
 .modal__item-details{
     display: flex;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 13px;
     line-height: 24px;
     color: rgb(120, 124, 130);
     align-items: center;
@@ -145,5 +151,3 @@
     cursor: pointer;
  
 }
-
-
