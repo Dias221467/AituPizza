@@ -10,7 +10,7 @@ let productID
 let ItemsOrder
 let buyItems = document.querySelector('#buyItems')
 const products = document.querySelectorAll('.productInCart')
-let total = document.querySelector('.modal__total-span')
+let total = document.querySelector('.modal__total-price-order span')
 
 // function creating an object containing order parameters
 //========================================================================================
@@ -108,23 +108,26 @@ function updateHtmlCart() {
     if (itemCart.length > 0) {
      let   result = itemCart.map(itemCart => {
             return ` <div class="modal__items">
-                         <div class="modal__name-img"> 
-                           <p class="modal__item-title">${itemCart.name}</p>
-                           <img src="${itemCart.image}" alt="">
-                        </div>   
-                        <div class="modal__item-details">
-                                <p class="modal__size">${itemCart.size}</p>
-                                <p class="modal__dough">${itemCart.dough}</p>
-                        </div>
-              
-                        <div class="modal__counter-wrapper">
-                                <div class="modal__minus" data-action="minus"  data-id=${itemCart.id}>-</div>
-                                <div class="modal__counter">${itemCart.count}</div>
-                                <div class="modal__plus" data-action="plus"  data-id=${itemCart.id}>+</div>
-                        </div>
-                            <div class="modal__price">$ <span>${itemCart.price}</span> </div>
-                            <div class="modal__total">$<span id=${itemCart.id}>${itemCart.basePrice}</span></div>  
-                        </div> `
+                            <div class="modal__name-img"> 
+                                <p class="modal__item-title">${itemCart.name}</p>
+                                <img src="${itemCart.image}" alt="">
+                            </div>   
+
+                            <div class="modal__item-details">
+                                    <p class="modal__size">${itemCart.size}-</p>
+                                    <p class="modal__dough">${itemCart.dough}</p>
+                            </div>
+                
+                            <div class="modal__counter-wrapper">
+                                    <button class="modal__minus buttons-counter" data-action="minus"  data-id=${itemCart.id}>-</button>
+                                    <div class="modal__counter">${itemCart.count}</div>
+                                    <button class="modal__plus buttons-counter" data-action="plus"  data-id=${itemCart.id}>+</button>
+                            </div>
+
+                                <div class="modal__price">$<span>${itemCart.price}</span> </div>
+                                <div class="modal__total">$<span id=${itemCart.id}>${itemCart.basePrice}</span></div>
+                          
+                    </div> `
                     });
                     buyItems.innerHTML = result.join('')     
                     totalPriceCart(itemCart, total)

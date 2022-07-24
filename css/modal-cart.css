@@ -1,0 +1,149 @@
+
+
+.modal{
+    position: fixed;
+    left: 43%;
+    z-index: 2;
+    background-color:#f3f3f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+    border-radius: 10px;
+    margin-right: 10%;
+    width: 700px;
+    height: 450px;
+    overflow: scroll;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+    margin-top: 60px;
+    font-family:system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   
+}
+
+.modal.active{
+    transform: scale(1);
+}
+
+.modal-header .close-cart{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}
+
+
+
+.modal__title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5%;
+   
+}
+
+.modal hr{
+    margin: 0 5%;
+}
+
+                    /* modal body */
+
+
+ .modal__items{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: 5%;
+   padding-right: 5%;
+   background-color: #fff;
+}
+
+.modal__counter-wrapper{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-width: 150px;
+    max-width: 150px;
+   
+}
+
+
+
+
+.modal__item-title{
+    text-align: left;
+    min-width: 150px;
+    max-width: 150px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family:system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+
+
+.modal__items img{
+    width: 60px;
+
+}
+.modal__counter{
+   
+    width:  2px 4px;
+}
+
+
+
+
+/* footer modal total price*/
+.modal__wrapper-total-price{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 10%;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.modal__wrapper-total-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__buy-btn{
+    background-color: #f9004d;
+    color:#fff;
+    border: 1px solid #f9004d;
+    border-radius: 20px;
+    height: 40px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.modal__item-details{
+    display: flex;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    color: rgb(120, 124, 130);
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-counter{
+    font-family: inherit;
+    color: rgb(120, 124, 130);
+    color:black;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    --text-color: #505061;
+    font-size: 20px;
+    margin: 10px;
+    line-height: 20px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+ 
+}
+
+

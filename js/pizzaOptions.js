@@ -42,7 +42,7 @@ export const pizzaOptions =
 5:[
     {size:'20sm', 
     price:'12', 
-    name: 'Sweet Chili',
+    name: 'Chili',
     description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
     image:'images/picca/Chicken Sweet Chili.png'},
     {size:'28sm', price:'14'},
@@ -75,7 +75,7 @@ export const pizzaOptions =
 9:[
     {size:'20sm', 
     price:'12', 
-    name: 'Sweet Chili',
+    name: 'Chili',
     description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
     image:'images/picca/Chicken Sweet Chili.png'},
     {size:'28sm', price:'14'},
