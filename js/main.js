@@ -70,6 +70,7 @@ window.addEventListener( 'click', function(event)
 
 // function for turn on and turn off modal window for cart 
 //====================================================================================================
+
 cart.addEventListener('click', function (event){
   if ( event.target.classList.contains('cart') && !modal.classList.contains('active'))
   {
@@ -80,4 +81,5 @@ cart.addEventListener('click', function (event){
              modal.classList.remove('active')
   }
 })
+
 //====================================================================================================
