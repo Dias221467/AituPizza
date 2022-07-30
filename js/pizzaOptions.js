@@ -125,8 +125,9 @@ const pizzaOptionsLength =  Object.keys(pizzaOptions).length
                         if (i == 9)
                { d1 = document.getElementById('third');}
           
-    d1.insertAdjacentHTML('beforeend', `  <div class="card" data-card-Id="${i}">
-
+    d1.insertAdjacentHTML('beforeend', ` 
+    
+    <div class="card" data-card-Id="${i}">
                 <div class="productInCart">
                     <img src="${pizzaOptions[i][0].image}" width="250px" alt="">
                     <h3 class="title">${pizzaOptions[i][0].name}</h3>
@@ -149,6 +150,6 @@ const pizzaOptionsLength =  Object.keys(pizzaOptions).length
                         </button>
                     </div>
                 </div>
-             </div>
+    </div>
   `)};
 //=====================================================================================================
