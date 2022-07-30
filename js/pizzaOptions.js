@@ -33,9 +33,9 @@ export const pizzaOptions =
 4:[
     {size:'20sm', 
     price:'15', 
-    name: 'Royal Fresh',
+    name: 'Peperone',
     description: 'Bacon, Chicken, Onion, Pickled cucumbers, Fresh tomatoes, Mozzarella cheese' ,
-    image:'images/picca/royal.png'},
+    image:'images/picca/peperoni.png'},
     {size:'28sm', price:'20'},
     {size:'33sm', price:'25'}],  
 
@@ -74,39 +74,39 @@ export const pizzaOptions =
     {size:'33sm', price:'29'}],         
 9:[
     {size:'20sm', 
-    price:'12', 
-    name: 'Chili',
-    description: 'Fresh tomatoes, Mozzarella cheese, Onion, Olives, Pickled Cucumbers, cucumbers, Fresh tomatoes,' ,
-    image:'images/picca/Chicken Sweet Chili.png'},
-    {size:'28sm', price:'14'},
-    {size:'33sm', price:'19'}],
+    price:'14', 
+    name: 'Julien',
+    description: 'Fresh tomatoes, Onion, Olives, Pickled Cucumbers, cucumbers,Mozzarella' ,
+    image:'images/picca/julien.png'},
+    {size:'28sm', price:'16'},
+    {size:'33sm', price:'121'}],
 
 10:[
     {size:'20sm', 
-    price:'20', 
-    name: '4 Cheese',
-    description: 'Chicken, Onion, Mozzarella cheese, Ham, Mushrooms,Tomato sauce, Teriyaki sauce' ,
-    image:'images/picca/4 Cheese.png'},
-    {size:'28sm', price:'28'},
-    {size:'33sm', price:'36'}],
+    price:'23', 
+    name: 'Gurme',
+    description: 'Tomatos, Mushrooms,Tomato sauce, Teriyaki sauce' ,
+    image:'images/picca/gurme.png'},
+    {size:'28sm', price:'30'},
+    {size:'33sm', price:'38'}],
 
 11:[
     {size:'20sm', 
-    price:'14', 
-    name: 'Carbonara',
-    description: ' Onion, Mozzarella cheese, Olives, Chicken, Onion, Mozzarella cheese, Olives',
-    image:'images/picca/Carbonara.png'},
-    {size:'28sm', price:'19'},
-    {size:'33sm', price:'27'}],
+    price:'19', 
+    name: 'Margarita',
+    description: 'Mozzarella cheese',
+    image:'images/picca/margarita.png'},
+    {size:'28sm', price:'25'},
+    {size:'33sm', price:'32'}],
 
 12:[
     {size:'20sm', 
-    price:'16', 
-    name: 'Double',
-    description: 'Chicken, Onion, Mozzarella cheese, Olives, Fresh tomatoes, Mozzarella cheese' ,
-    image:'images/picca/Double Pepperoni.png'},
-    {size:'28sm', price:'24'},
-    {size:'33sm', price:'29'}] 
+    price:'14', 
+    name: 'BBQ',
+    description: 'Bacon, Ham, Chicken, Onion, BBQ sauce, Mozzarella cheese, Tomato sauce' ,
+    image:'images/picca/BBQ.png'},
+    {size:'28sm', price:'22'},
+    {size:'33sm', price:'25'}] 
  }
 
 //=====================================================================================================
