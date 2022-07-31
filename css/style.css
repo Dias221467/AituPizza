@@ -68,12 +68,12 @@ main{
 }
 
 
-.row{
+.pizza__row{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.row .card{
+.pizza__row .card{
     display: inline-block;
     margin: 8px;
 }    

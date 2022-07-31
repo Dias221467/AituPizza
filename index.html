@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/modal-cart.css">
+    <link rel="stylesheet" href="css/items-card.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>Romino's</title>
 </head>
@@ -24,9 +25,9 @@
             </div>
 
             <ul>
-                <li><a href="#">picca</a></li>
+                <li><a href="#">pizza</a></li>
+                <li><a href="#drinks">drinks</a></li>
                 <li><a href="#">dessert</a></li>
-                <li><a href="#">drinks</a></li>
                 <li><a href="#">soucess</a></li>
             </ul>
 
@@ -65,13 +66,29 @@
         <!-- </div> -->
     </header>
     <main>
-        
-        <div class="row" id="first"> </div>
+        <div class="pizza">
+             <div class="pizza__row" id="first"> </div>
 
-        <div class="row" id="second"> </div>
+            <div class="pizza__row" id="second"> </div>
 
-        <div class="row" id="third"> </div>
-
+            <div class="pizza__row" id="third"> </div>
+        </div>
+       
+        <div class="drink">
+            <div class="drink__row" id="drinks">
+                <div class="drink__card">
+                     <img src="/images/drinks/7up.png" alt="">
+                     <div class="drink__body">
+                        <p class="title">7UP</p>
+                        <p class="description">Drink 7UP 0.5 liters.</p>
+                        <div class="drink__price-wrapper">
+                            <p class="drink__price">$<span>5</span></p>
+                            <button  class="button-30 addToCartItem">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
     <footer>
@@ -79,7 +96,7 @@
         <hr>
            <div><p>© Dominos 2022 </p></div>
     </footer>
-        `
+        
     <script type="module" src="js/base.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/orderCart.js"></script>

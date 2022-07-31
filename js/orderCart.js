@@ -16,7 +16,7 @@ let total = document.querySelector('.modal__total-price-order span')
 //========================================================================================
 products.forEach(product => {
     product.addEventListener('click', function (event) {
-        if (event.target.classList.contains('addToCart')) {
+        if (event.target.classList.contains('addToCartPizza')) {
             productID = event.target.dataset.productId;
             const productName = product.querySelector('.title').textContent;
             const productPrice = product.querySelector('.price span').textContent;
