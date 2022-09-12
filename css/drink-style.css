@@ -1,0 +1,19 @@
+.drink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.drink__card{
+    display: inline;
+   width: 270px;
+   height: 500px;
+   margin: 8px;
+}
+
+
+.drink__body{
+    background-color: #fff;
+}
