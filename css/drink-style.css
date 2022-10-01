@@ -8,7 +8,7 @@
 .drink__card{
     background-color: #FFF;
     width: 300px;
-    height: 400px;
+    height: 425px;
     border-radius: 10%;
     padding: 20px; 
     margin: 8px;
@@ -38,5 +38,7 @@
 }
 .drink__price-wrapper{
     padding-top: 20px;
+    align-items: center;
+    justify-content: center;
     display: flex;
 }
