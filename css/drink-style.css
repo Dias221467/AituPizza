@@ -5,11 +5,10 @@
 
 }
 
-
 .drink__card{
     background-color: #FFF;
     width: 300px;
-    height: 500px;
+    height: 400px;
     border-radius: 10%;
     padding: 20px; 
     margin: 8px;
@@ -17,4 +16,27 @@
 
 .drink__card img{
     border-radius: 10%;
+}
+
+.drink__price{
+    font-family:  system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: rgb(11, 11, 11);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: lowercase;
+}
+
+.drink__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drink__description{
+    color: rgb(120, 124, 130)
+}
+.drink__price-wrapper{
+    padding-top: 20px;
+    display: flex;
 }
