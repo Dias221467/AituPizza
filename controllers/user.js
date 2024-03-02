@@ -1,4 +1,6 @@
 const UserModel = require('../model/user')
+const bcrypt = require('bcrypt');
+const saltRounds = 10; // количество "соли" для хеширования пароля
 // Create and Save a new user
 exports.create = async (req, res) => {
     if (!req.body.email && !req.body.firstName && !req.body.lastName && !req.body.phone && !req.body.password) {
@@ -7,7 +9,7 @@ exports.create = async (req, res) => {
     
     const user = new UserModel({
         email: req.body.email,
-        password: req.body.password,
+        password: await bcrypt.hash(req.body.password, saltRounds),
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         phone: req.body.phone

@@ -1,8 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(express.static(__dirname + '/css'));
+app.use(express.static(__dirname + '/js'));
+app.use(express.static(__dirname + '/images'));
 const dbConfig = require('./config/database.config.js');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
@@ -23,9 +27,10 @@ app.get('/register.html', (req, res) => {
 app.get('/login.html', (req, res) => {
     res.sendFile(__dirname+'/login.html')
 });
-app.use(express.static('css'));
+const PizzaRoute = require('./routes/pizza')
 const UserModel = require('./model/user')
 const UserRoute = require('./routes/user')
+app.use('/pizza',PizzaRoute)
 app.use('/user',UserRoute)
 app.post('/user/login', async (req, res) => {
     const { emailOrPhone, password } = req.body;
@@ -33,11 +38,16 @@ app.post('/user/login', async (req, res) => {
     try {
         // Assuming you have a UserModel
         const user = await UserModel.findOne({ $or: [{ email: emailOrPhone }, { phone: emailOrPhone }] });
-
-        if (user.password === password) {
-            res.status(200).send({ message: "Successfully entered account" });
+            if (user && await bcrypt.compare(password, user.password)) {
+            // Пароли совпадают, вход успешный
+            res.send({
+                message: "Successfully entered account"
+            });
         } else {
-            res.status(401).send({ message: "Incorrect email/phone or password" });
+            // Пользователь не найден или пароли не совпадают
+            res.status(401).send({
+                message: "Invalid email/phone or password"
+            });
         }
     } catch (error) {
         console.error("Error during login:", error);
